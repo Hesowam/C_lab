@@ -15,7 +15,7 @@ char * deleteSpaces(char * string){
 }
 int main() {
  FILE * file = NULL;
- char fileName[] = "C:\\Users\\boost\\CLionProjects\\untitled1\\lab-11-1.txt"; //Your file patch
+ char fileName[] = "..//lab-11-1.txt"; //Your file patch
  file = fopen(fileName, "r");
  char* string = (char*)malloc(250+sizeof(char));
  if (file != NULL){
