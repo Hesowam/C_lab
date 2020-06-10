@@ -5,7 +5,7 @@
 int ScalarSumVectors(int **pInt, int column, int i, int j);
 
 int inputColum() {
-    const int column;
+    const int column = 0;
     printf("Enter rows count:\t");
     scanf_s("%d", &column);
     return column;
@@ -29,7 +29,7 @@ int PrintMatrixArray(int** a, int col) {
     }
 }
 int CheckForOrthonormalMatrix(int** arr, int column) {
-    int s = 0, j, i;
+    int s = 0, j;
     for (int i = 0; i < column; i++) {
         j = i;
         s = ScalarSumVectors(arr, column, i, j);
@@ -55,8 +55,8 @@ void main() {
     for (int i = 0; i < col; i++) {
         a[i] = (int*)malloc(col * sizeof(int));
     }
-    int* ar = initialArry(a, col);
-    CheckForOrthonormalMatrix(ar, col);
+    int* ar = initialArry(&a, col);
+    CheckForOrthonormalMatrix(&ar, col);
     printf("\n");
-    PrintMatrixArray(ar, col);
+    PrintMatrixArray(&ar, col);
 }
