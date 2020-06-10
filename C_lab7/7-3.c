@@ -10,15 +10,15 @@ int inputColum() {
     scanf_s("%d", &column);
     return column;
 }
-int* initialArry(int** arry, int column) {
+int* initialArry(int** array, int column) {
     const int low = 0, hight = 2;
     srand((unsigned)time(0));
     for (int i = 0; i < column; i++) {
         for (int j = 0; j < column; j++) {
-            arry[i][j] = low + rand() % hight;
+            array[i][j] = low + rand() % hight;
         }
     }
-    return arry;
+    return array;
 }
 int PrintMatrixArray(int** a, int col) {
     for (int i = 0; i < col; i++) {
@@ -49,7 +49,7 @@ int ScalarSumVectors(int **pArray, int column, int i, int j) {
     }
     return s;
 }
-void main() {
+int main() {
     const int col = inputColum();
     int* a = (int**)malloc(col * sizeof(int));
     for (int i = 0; i < col; i++) {
@@ -59,4 +59,5 @@ void main() {
     CheckForOrthonormalMatrix(&ar, col);
     printf("\n");
     PrintMatrixArray(&ar, col);
+    return 0;
 }
