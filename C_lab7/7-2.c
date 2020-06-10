@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 int inputColumn() {
-    int column = NULL;
-    while (column == NULL || column<=0){
+    int column = 0;
+    while (column <= 0){
         printf("Enter numbers count: ");
         scanf_s("%d", &column);
     }
@@ -54,5 +54,6 @@ int main() {
     PrintArray(ar, col);
     printf("\nThe sum between the first two negative elements - %d", GetMinArraySum(ar, col));
     printf("\nMinimal array element - %d", findMinElementOfArray(ar, col));
+    printf("\n");
     return 0;
 }
