@@ -61,7 +61,7 @@ int getMaximumElement(int * pInt, int n){
 }
 int main() {
  FILE * file = NULL;
- const char fileName[] = "C:\\Users\\boost\\CLionProjects\\untitled1\\lab-11-2.txt"; //Your file patch
+ const char fileName[] = "..//lab-11-2.txt"; //Your file patch
  file = fopen(fileName, "r");
  char * tempString = (char *)malloc(250+sizeof(char));
  char * string;
